@@ -23,6 +23,8 @@ import { ClientSettings } from './client/pages/Settings';
 import { ClientPayments } from './client/pages/Payments';
 import { ClientSupport } from './client/pages/Support';
 
+import { ScrollToTop } from './vitrine/components/ScrollToTop';
+
 const queryClient = new QueryClient();
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <AuthProvider>
+          <ScrollToTop />
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
