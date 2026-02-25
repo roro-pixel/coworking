@@ -7,6 +7,7 @@ import { Layout } from './vitrine/components/layout/Layout';
 import { Home } from './vitrine/pages/Home';
 import { Spaces } from './vitrine/pages/Spaces';
 import { SpaceDetail } from './vitrine/pages/SpaceDetail';
+import { Subscriptions } from './vitrine/pages/Subscriptions';
 import { Contact } from './vitrine/pages/Contact';
 import { About } from './vitrine/pages/About';
 import { Login } from './vitrine/pages/Login';
@@ -36,6 +37,7 @@ function App() {
             <Route path="/" element={<Layout><Home /></Layout>} />
             <Route path="/espaces" element={<Layout><Spaces /></Layout>} />
             <Route path="/espaces/:id" element={<Layout><SpaceDetail /></Layout>} />
+            <Route path="/abonnements" element={<Layout><Subscriptions /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
             <Route path="/a-propos" element={<Layout><About /></Layout>} />
 

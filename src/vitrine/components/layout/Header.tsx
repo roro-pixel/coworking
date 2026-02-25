@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
   const menuItems = [
     { label: 'Accueil', path: '/' },
     { label: 'Espaces & Tarifs', path: '/espaces' },
+    { label: 'Nos abonnements', path: '/abonnements' },
     { label: 'À propos', path: '/a-propos' },
     { label: 'Contact', path: '/contact' },
   ];

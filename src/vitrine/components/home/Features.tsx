@@ -5,32 +5,32 @@ const features = [
   {
     icon: Wifi,
     title: 'Internet haut débit',
-    description: 'Fibre optique symétrique 1 Gb/s avec backup 4G'
+    description: 'Fibre 300 Mb/s + backup internet hertzien pour une connexion fiable et permanente.'
   },
   {
     icon: Coffee,
-    title: 'Café et thé à volonté',
-    description: 'Espaces détente avec café équitable et thés bio'
+    title: 'Snack bar',
+    description: 'Notre espace snack intégré propose une offre légère de restauration (sandwiches, boissons et encas), pensée pour optimiser votre confort et votre efficacité.'
   },
   {
     icon: Building2,
     title: 'Salles de réunion',
-    description: 'Équipées en vidéoprojecteur et visioconférence'
+    description: 'Des salles de réunion modernes et fonctionnelles, équipées pour garantir le bon déroulement de vos réunions stratégiques, formations et rencontres professionnelles.'
   },
   {
     icon: Shield,
     title: 'Sécurité 24/7',
-    description: 'Accès sécurisé par badge et vidéosurveillance'
+    description: 'Accès sécurisé par badge et vidéosurveillance pour une tranquillité d\'esprit totale.'
   },
   {
     icon: Package,
     title: 'Casiers sécurisés',
-    description: 'Pour stocker votre matériel en toute tranquillité'
+    description: 'Pour stocker votre matériel en toute tranquillité.'
   },
   {
     icon: Users,
     title: 'Événements networking',
-    description: 'Afterworks, workshops et conférences réguliers'
+    description: 'Afterworks, workshops et conférences réguliers pour développer votre réseau.'
   }
 ];
 

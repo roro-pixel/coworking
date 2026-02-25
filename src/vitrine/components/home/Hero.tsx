@@ -45,16 +45,16 @@ export const Hero: React.FC = () => {
               {/* Stats */}
               <div className="flex gap-8 mt-12">
                 <div>
-                  <div className="text-3xl font-bold text-violet-600">10+</div>
-                  <div className="text-gray-600">Espaces</div>
-                </div>
-                <div>
                   <div className="text-3xl font-bold text-violet-600">500+</div>
                   <div className="text-gray-600">Membres</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-violet-600">4.9</div>
                   <div className="text-gray-600">Note moyenne</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-violet-600">24/7</div>
+                  <div className="text-gray-600">Accès sécurisé</div>
                 </div>
               </div>
             </div>
