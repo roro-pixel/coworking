@@ -26,7 +26,7 @@ export const ClientBookings: React.FC = () => {
     return (
       <ClientLayout>
         <div className="flex justify-center items-center min-h-[400px]">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
         </div>
       </ClientLayout>
     );
@@ -49,7 +49,7 @@ export const ClientBookings: React.FC = () => {
               placeholder="Rechercher un espace..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2">
@@ -59,7 +59,7 @@ export const ClientBookings: React.FC = () => {
                 onClick={() => setFilter(f)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
                   filter === f
-                    ? 'bg-violet-600 text-white'
+                    ? 'bg-fuchsia-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -113,7 +113,7 @@ export const ClientBookings: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 mb-1">Prix</p>
-                      <div className="text-sm font-semibold text-violet-600">{booking.price.toLocaleString()} FCFA</div>
+                      <div className="text-sm font-semibold text-fuchsia-600">{booking.price.toLocaleString()} FCFA</div>
                     </div>
                   </div>
 
@@ -123,7 +123,7 @@ export const ClientBookings: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="text-violet-600 hover:text-violet-700 self-center">
+                <button className="text-fuchsia-600 hover:text-fuchsia-700 self-center">
                   <ChevronRight size={20} />
                 </button>
               </div>
@@ -138,7 +138,7 @@ export const ClientBookings: React.FC = () => {
             <p className="text-gray-500 mb-6">Vous n'avez pas encore de réservations</p>
             <Link
               to="/espaces"
-              className="inline-flex items-center px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
+              className="inline-flex items-center px-6 py-3 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700"
             >
               Réserver un espace
             </Link>

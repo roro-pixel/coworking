@@ -14,7 +14,7 @@ export const ClientUpcoming: React.FC = () => {
     return (
       <ClientLayout>
         <div className="flex justify-center items-center min-h-[400px]">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
         </div>
       </ClientLayout>
     );
@@ -43,7 +43,7 @@ export const ClientUpcoming: React.FC = () => {
               <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all ml-4">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0 w-16 text-center">
-                    <div className="text-2xl font-bold text-violet-600">
+                    <div className="text-2xl font-bold text-fuchsia-600">
                       {booking.date.split(' ')[0]}
                     </div>
                     <div className="text-sm text-gray-500">
@@ -74,7 +74,7 @@ export const ClientUpcoming: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-xs text-gray-500 mb-1">Prix</p>
-                        <div className="text-sm font-semibold text-violet-600">
+                        <div className="text-sm font-semibold text-fuchsia-600">
                           {booking.price.toLocaleString()} FCFA
                         </div>
                       </div>
@@ -106,7 +106,7 @@ export const ClientUpcoming: React.FC = () => {
               <p className="text-gray-500 mb-6">Vous n'avez pas encore de réservations planifiées</p>
               <button
                 onClick={() => window.location.href = '/espaces'}
-                className="px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
+                className="px-6 py-3 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700"
               >
                 Explorer les espaces
               </button>

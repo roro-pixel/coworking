@@ -24,10 +24,6 @@ export const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <img src={Logo} alt="" className='w-15 h-15' />
-          {/* <Link to="/" className="text-2xl font-bold text-gray-900">
-            CoWork<span className="text-violet-600">Space</span>
-          </Link> */}
-
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (

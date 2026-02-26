@@ -14,7 +14,7 @@ export const UpcomingBookingsPreview: React.FC<UpcomingBookingsPreviewProps> = (
     <div className="bg-white rounded-xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-gray-900">Réservations à venir</h3>
-        <Link to="/client/upcoming" className="text-violet-600 text-sm hover:underline flex items-center">
+        <Link to="/client/upcoming" className="text-fuchsia-600 text-sm hover:underline flex items-center">
           Voir tout
           <ChevronRight size={16} className="ml-1" />
         </Link>

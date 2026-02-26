@@ -28,7 +28,7 @@ export const ClientInvoices: React.FC = () => {
     return (
       <ClientLayout>
         <div className="flex justify-center items-center min-h-[400px]">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
         </div>
       </ClientLayout>
     );
@@ -70,13 +70,13 @@ export const ClientInvoices: React.FC = () => {
               placeholder="Rechercher une facture..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
             />
           </div>
           <select
             value={year}
             onChange={(e) => setYear(e.target.value)}
-            className="px-4 py-2 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="px-4 py-2 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
           >
             <option value="2026">2026</option>
             <option value="2025">2025</option>
@@ -121,10 +121,10 @@ export const ClientInvoices: React.FC = () => {
                     </span>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <button className="text-violet-600 hover:text-violet-700 mr-3">
+                    <button className="text-fuchsia-600 hover:text-fuchsia-700 mr-3">
                       <FileText size={18} />
                     </button>
-                    <button className="text-violet-600 hover:text-violet-700">
+                    <button className="text-fuchsia-600 hover:text-fuchsia-700">
                       <Download size={18} />
                     </button>
                   </td>

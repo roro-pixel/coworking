@@ -30,7 +30,7 @@ export const ClientHeader: React.FC<ClientHeaderProps> = ({ toggleSidebar, isMob
           {/* Logo mobile */}
           {isMobile && (
             <span className="text-lg font-bold text-gray-900">
-              CoWork<span className="text-violet-600">Space</span>
+              CoWork<span className="text-fuchsia-600">Space</span>
             </span>
           )}
 
@@ -55,8 +55,8 @@ export const ClientHeader: React.FC<ClientHeaderProps> = ({ toggleSidebar, isMob
               onClick={() => setShowMenu(!showMenu)}
               className="flex items-center space-x-2 md:space-x-3 p-1 md:p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
-              <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
-                <User size={16} className="text-violet-600" />
+              <div className="w-8 h-8 bg-fuchsia-100 rounded-full flex items-center justify-center">
+                <User size={16} className="text-fuchsia-600" />
               </div>
               {!isMobile && (
                 <>

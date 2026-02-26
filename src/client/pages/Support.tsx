@@ -91,7 +91,7 @@ export const ClientSupport: React.FC = () => {
             placeholder="Rechercher une question..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
           />
         </div>
       </div>
@@ -111,7 +111,7 @@ export const ClientSupport: React.FC = () => {
                 <Clock size={12} className="mr-1" />
                 {method.availability}
               </div>
-              <button className="text-violet-600 hover:text-violet-700 text-sm font-medium flex items-center">
+              <button className="text-fuchsia-600 hover:text-fuchsia-700 text-sm font-medium flex items-center">
                 Contacter
                 <ChevronRight size={16} className="ml-1" />
               </button>
@@ -123,7 +123,7 @@ export const ClientSupport: React.FC = () => {
       {/* FAQ */}
       <div className="bg-white rounded-xl p-6 shadow-sm">
         <div className="flex items-center mb-6">
-          <Book className="text-violet-600 mr-3" size={24} />
+          <Book className="text-fuchsia-600 mr-3" size={24} />
           <h2 className="text-lg font-semibold text-gray-900">Questions fréquentes</h2>
         </div>
 

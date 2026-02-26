@@ -36,7 +36,7 @@ export const ClientProfile: React.FC = () => {
           className={`px-4 py-2 rounded-lg transition-colors ${
             isEditing
               ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              : 'bg-violet-600 text-white hover:bg-violet-700'
+              : 'bg-fuchsia-600 text-white hover:bg-fuchsia-700'
           }`}
         >
           {isEditing ? 'Annuler' : 'Modifier le profil'}
@@ -49,11 +49,11 @@ export const ClientProfile: React.FC = () => {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="text-center">
               <div className="relative inline-block">
-                <div className="w-32 h-32 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <User size={48} className="text-violet-600" />
+                <div className="w-32 h-32 bg-fuchsia-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <User size={48} className="text-fuchsia-600" />
                 </div>
                 {isEditing && (
-                  <button className="absolute bottom-0 right-0 bg-violet-600 text-white p-2 rounded-full hover:bg-violet-700">
+                  <button className="absolute bottom-0 right-0 bg-fuchsia-600 text-white p-2 rounded-full hover:bg-fuchsia-700">
                     <Camera size={16} />
                   </button>
                 )}
@@ -85,8 +85,8 @@ export const ClientProfile: React.FC = () => {
 
             <div className="mt-6 pt-6 border-t border-gray-100">
               <h3 className="font-medium text-gray-900 mb-4">Mon abonnement</h3>
-              <div className="bg-violet-50 p-4 rounded-lg">
-                <p className="text-sm text-violet-600 font-medium mb-1">Plan Premium</p>
+              <div className="bg-fuchsia-50 p-4 rounded-lg">
+                <p className="text-sm text-fuchsia-600 font-medium mb-1">Plan Premium</p>
                 <p className="text-2xl font-bold text-gray-900 mb-2">199 000 FCFA <span className="text-sm font-normal text-gray-500">/mois</span></p>
                 <p className="text-xs text-gray-500">Renouvellement le 15/03/2026</p>
               </div>
@@ -109,7 +109,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ export const ClientProfile: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   disabled={!isEditing}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
@@ -145,7 +145,7 @@ export const ClientProfile: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   disabled={!isEditing}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
@@ -158,7 +158,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.company}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
                 <div>
@@ -169,7 +169,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.position}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
               </div>
@@ -182,7 +182,7 @@ export const ClientProfile: React.FC = () => {
                   value={formData.address}
                   onChange={handleChange}
                   disabled={!isEditing}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
@@ -195,7 +195,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.city}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
                 <div>
@@ -206,7 +206,7 @@ export const ClientProfile: React.FC = () => {
                     value={formData.postalCode}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500"
                   />
                 </div>
               </div>
@@ -219,13 +219,13 @@ export const ClientProfile: React.FC = () => {
                   value={formData.bio}
                   onChange={handleChange}
                   disabled={!isEditing}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 disabled:bg-gray-50 disabled:text-gray-500 resize-none"
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 disabled:bg-gray-50 disabled:text-gray-500 resize-none"
                 />
               </div>
 
               {isEditing && (
                 <div className="flex justify-end pt-4">
-                  <button className="bg-violet-600 text-white px-6 py-2 rounded-lg hover:bg-violet-700 flex items-center">
+                  <button className="bg-fuchsia-600 text-white px-6 py-2 rounded-lg hover:bg-fuchsia-700 flex items-center">
                     <Save size={18} className="mr-2" />
                     Enregistrer les modifications
                   </button>

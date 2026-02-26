@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from'../../../assets/img/logo.jpeg';
 import {
   LayoutDashboard,
   Calendar,
@@ -40,10 +41,7 @@ export const ClientSidebar: React.FC<ClientSidebarProps> = ({ closeSidebar }) =>
       <div className="p-4">
         {/* Logo desktop uniquement */}
         <div className="hidden md:flex items-center space-x-2 mb-8 px-4">
-          <div className="w-8 h-8 bg-violet-600 rounded-lg"></div>
-          <span className="text-xl font-bold text-gray-900">
-            CoWork<span className="text-violet-600">Space</span>
-          </span>
+          <img src={Logo} alt="" className='w-15 h-15 ml-15' />
         </div>
 
         <nav className="space-y-1">
@@ -57,7 +55,7 @@ export const ClientSidebar: React.FC<ClientSidebarProps> = ({ closeSidebar }) =>
                 className={({ isActive }) =>
                   `flex items-center px-4 py-3 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-violet-50 text-violet-600'
+                      ? 'bg-fuchsia-50 text-fuchsia-600'
                       : 'text-gray-700 hover:bg-gray-100'
                   }`
                 }

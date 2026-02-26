@@ -86,7 +86,7 @@ export const ClientWallet: React.FC = () => {
       </div>
 
       {/* Solde actuel */}
-      <div className="bg-violet-600 rounded-xl p-6 shadow-lg mb-6 text-white">
+      <div className="bg-fuchsia-600 rounded-xl p-6 shadow-lg mb-6 text-white">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
             <Wallet size={24} className="mr-2" />
@@ -146,8 +146,8 @@ export const ClientWallet: React.FC = () => {
                     className={`
                       p-3 border rounded-lg text-center transition-colors
                       ${rechargeAmount === amount 
-                        ? 'border-violet-600 bg-violet-50 text-violet-600' 
-                        : 'border-gray-200 hover:border-violet-200'
+                        ? 'border-fuchsia-600 bg-fuchsia-50 text-fuchsia-600' 
+                        : 'border-gray-200 hover:border-fuchsia-200'
                       }
                     `}
                   >
@@ -170,7 +170,7 @@ export const ClientWallet: React.FC = () => {
                   setRechargeAmount(null);
                 }}
                 placeholder="Ex: 15000"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
               />
             </div>
 
@@ -184,18 +184,18 @@ export const ClientWallet: React.FC = () => {
                   onClick={() => setPaymentMethod('mobile')}
                   className={`
                     w-full p-4 border rounded-lg flex items-center justify-between
-                    ${paymentMethod === 'mobile' ? 'border-violet-600 bg-violet-50' : 'border-gray-200'}
+                    ${paymentMethod === 'mobile' ? 'border-fuchsia-600 bg-fuchsia-50' : 'border-gray-200'}
                   `}
                 >
                   <div className="flex items-center">
-                    <Smartphone size={20} className="text-violet-600 mr-3" />
+                    <Smartphone size={20} className="text-fuchsia-600 mr-3" />
                     <div className="text-left">
                       <p className="font-medium text-gray-900">Mobile Money</p>
                       <p className="text-xs text-gray-500">Airtel Money, MTN Money</p>
                     </div>
                   </div>
                   {paymentMethod === 'mobile' && (
-                    <Check size={20} className="text-violet-600" />
+                    <Check size={20} className="text-fuchsia-600" />
                   )}
                 </button>
 
@@ -203,18 +203,18 @@ export const ClientWallet: React.FC = () => {
                   onClick={() => setPaymentMethod('card')}
                   className={`
                     w-full p-4 border rounded-lg flex items-center justify-between
-                    ${paymentMethod === 'card' ? 'border-violet-600 bg-violet-50' : 'border-gray-200'}
+                    ${paymentMethod === 'card' ? 'border-fuchsia-600 bg-fuchsia-50' : 'border-gray-200'}
                   `}
                 >
                   <div className="flex items-center">
-                    <CreditCard size={20} className="text-violet-600 mr-3" />
+                    <CreditCard size={20} className="text-fuchsia-600 mr-3" />
                     <div className="text-left">
                       <p className="font-medium text-gray-900">Carte bancaire</p>
                       <p className="text-xs text-gray-500">Visa, Mastercard</p>
                     </div>
                   </div>
                   {paymentMethod === 'card' && (
-                    <Check size={20} className="text-violet-600" />
+                    <Check size={20} className="text-fuchsia-600" />
                   )}
                 </button>
               </div>
@@ -231,7 +231,7 @@ export const ClientWallet: React.FC = () => {
               <button
                 onClick={handleRecharge}
                 disabled={!rechargeAmount && !customAmount}
-                className="flex-1 bg-violet-600 text-white px-4 py-3 rounded-lg hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-fuchsia-600 text-white px-4 py-3 rounded-lg hover:bg-fuchsia-700 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Recharger
               </button>
@@ -282,7 +282,7 @@ export const ClientWallet: React.FC = () => {
         </div>
 
         {/* Bouton télécharger relevé */}
-        <button className="mt-6 w-full flex items-center justify-center text-violet-600 hover:text-violet-700 py-2 border-t border-gray-100">
+        <button className="mt-6 w-full flex items-center justify-center text-fuchsia-600 hover:text-fuchsia-700 py-2 border-t border-gray-100">
           <Download size={16} className="mr-2" />
           Télécharger le relevé de transactions
         </button>

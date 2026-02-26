@@ -112,7 +112,7 @@ export const ClientPayments: React.FC = () => {
             <h2 className="text-lg font-semibold text-gray-900">Cartes et comptes</h2>
             <button
               onClick={() => setShowAddCard(!showAddCard)}
-              className="text-violet-600 hover:text-violet-700 flex items-center text-sm font-medium"
+              className="text-fuchsia-600 hover:text-fuchsia-700 flex items-center text-sm font-medium"
             >
               <Plus size={16} className="mr-1" />
               Ajouter
@@ -124,7 +124,7 @@ export const ClientPayments: React.FC = () => {
               <div
                 key={method.id}
                 className={`p-4 border rounded-lg ${
-                  method.isDefault ? 'border-violet-500 bg-violet-50' : 'border-gray-200'
+                  method.isDefault ? 'border-fuchsia-500 bg-fuchsia-50' : 'border-gray-200'
                 }`}
               >
                 <div className="flex items-start justify-between">
@@ -150,7 +150,7 @@ export const ClientPayments: React.FC = () => {
                   
                   <div className="flex items-center space-x-2">
                     {method.isDefault ? (
-                      <span className="text-xs bg-violet-100 text-violet-700 px-2 py-1 rounded-full flex items-center">
+                      <span className="text-xs bg-fuchsia-100 text-fuchsia-700 px-2 py-1 rounded-full flex items-center">
                         <CheckCircle size={12} className="mr-1" />
                         Par défaut
                       </span>
@@ -187,7 +187,7 @@ export const ClientPayments: React.FC = () => {
                   <input
                     type="text"
                     placeholder="1234 5678 9012 3456"
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -196,7 +196,7 @@ export const ClientPayments: React.FC = () => {
                     <input
                       type="text"
                       placeholder="MM/AA"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     />
                   </div>
                   <div>
@@ -204,7 +204,7 @@ export const ClientPayments: React.FC = () => {
                     <input
                       type="text"
                       placeholder="123"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     />
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export const ClientPayments: React.FC = () => {
                   <input
                     type="text"
                     placeholder="JEAN DUPONT"
-                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                   />
                 </div>
                 <div className="flex items-center justify-end space-x-3 pt-4">
@@ -223,7 +223,7 @@ export const ClientPayments: React.FC = () => {
                   >
                     Annuler
                   </button>
-                  <button className="px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700">
+                  <button className="px-4 py-2 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700">
                     Ajouter
                   </button>
                 </div>

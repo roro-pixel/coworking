@@ -17,7 +17,7 @@ const MockQRCode = ({ value }: { value: string }) => {
   const seed = generatePattern(value);
   
   return (
-    <div className="w-48 h-48 bg-gradient-to-br from-violet-600 to-violet-800 rounded-xl p-4 mx-auto">
+    <div className="w-48 h-48 bg-gradient-to-br from-fuchsia-600 to-fuchsia-800 rounded-xl p-4 mx-auto">
       <div className="w-full h-full bg-white rounded-lg flex items-center justify-center">
         <div className="grid grid-cols-7 gap-1">
           {[...Array(49)].map((_, i) => {
@@ -54,12 +54,12 @@ export const QRCodeSection: React.FC = () => {
     <div className="bg-white rounded-xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center">
-          <QrCode size={24} className="text-violet-600 mr-3" />
+          <QrCode size={24} className="text-fuchsia-600 mr-3" />
           <h3 className="text-lg font-semibold text-gray-900">Mon QR Code</h3>
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-violet-600 hover:text-violet-700 text-sm font-medium"
+          className="text-fuchsia-600 hover:text-fuchsia-700 text-sm font-medium"
         >
           {isExpanded ? 'Réduire' : 'Agrandir'}
         </button>
@@ -78,7 +78,7 @@ export const QRCodeSection: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button className="flex-1 bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 flex items-center justify-center">
+              <button className="flex-1 bg-fuchsia-600 text-white px-4 py-2 rounded-lg hover:bg-fuchsia-700 flex items-center justify-center">
                 <Download size={16} className="mr-2" />
                 Télécharger
               </button>
@@ -105,15 +105,15 @@ export const QRCodeSection: React.FC = () => {
           // Vue réduite (dans profil)
           <>
             <div className="flex-1 flex items-center">
-              <div className="w-16 h-16 bg-violet-100 rounded-lg flex items-center justify-center mr-4">
-                <QrCode size={32} className="text-violet-600" />
+              <div className="w-16 h-16 bg-fuchsia-100 rounded-lg flex items-center justify-center mr-4">
+                <QrCode size={32} className="text-fuchsia-600" />
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-900">Votre QR code personnel</p>
                 <p className="text-xs text-gray-500">Présentez-le à l'accueil</p>
               </div>
             </div>
-            <button className="text-violet-600 hover:text-violet-700 text-sm font-medium whitespace-nowrap">
+            <button className="text-fuchsia-600 hover:text-fuchsia-700 text-sm font-medium whitespace-nowrap">
               Voir QR code →
             </button>
           </>

@@ -43,19 +43,19 @@ export const ClientActivities: React.FC = () => {
       {/* Statistiques rapides */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-          <Users size={20} className="mx-auto text-violet-600 mb-2" />
+          <Users size={20} className="mx-auto text-fuchsia-600 mb-2" />
           <p className="text-xl font-bold text-gray-900">{guests.length}</p>
           <p className="text-xs text-gray-500">Invitée(s)</p>
         </div>
         <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-          <FileText size={20} className="mx-auto text-violet-600 mb-2" />
+          <FileText size={20} className="mx-auto text-fuchsia-600 mb-2" />
           <p className="text-xl font-bold text-gray-900">
             {documents.filter(d => d.status === 'fourni').length}/{documents.length}
           </p>
           <p className="text-xs text-gray-500">Documents</p>
         </div>
         <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-          <Package size={20} className="mx-auto text-violet-600 mb-2" />
+          <Package size={20} className="mx-auto text-fuchsia-600 mb-2" />
           <p className="text-xl font-bold text-gray-900">{deliveries.length}</p>
           <p className="text-xs text-gray-500">Livraisons</p>
         </div>
@@ -67,7 +67,7 @@ export const ClientActivities: React.FC = () => {
           <h3 className="text-lg font-semibold text-gray-900">Mes invités</h3>
           <button
             onClick={() => setShowInviteModal(true)}
-            className="text-violet-600 hover:text-violet-700 flex items-center text-sm font-medium"
+            className="text-fuchsia-600 hover:text-fuchsia-700 flex items-center text-sm font-medium"
           >
             <Plus size={16} className="mr-1" />
             Inviter
@@ -78,8 +78,8 @@ export const ClientActivities: React.FC = () => {
           {guests.map((guest) => (
             <div key={guest.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
-                  <span className="text-violet-600 font-semibold">
+                <div className="w-10 h-10 bg-fuchsia-100 rounded-full flex items-center justify-center">
+                  <span className="text-fuchsia-600 font-semibold">
                     {guest.name.charAt(0)}
                   </span>
                 </div>
@@ -125,7 +125,7 @@ export const ClientActivities: React.FC = () => {
                   En attente
                 </span>
               ) : (
-                <button className="text-xs text-violet-600 border border-violet-200 px-3 py-1 rounded-full hover:bg-violet-50 flex items-center">
+                <button className="text-xs text-fuchsia-600 border border-fuchsia-200 px-3 py-1 rounded-full hover:bg-fuchsia-50 flex items-center">
                   <Upload size={12} className="mr-1" />
                   Fournir
                 </button>
@@ -161,7 +161,7 @@ export const ClientActivities: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-4 w-full text-center text-sm text-violet-600 hover:text-violet-700">
+        <button className="mt-4 w-full text-center text-sm text-fuchsia-600 hover:text-fuchsia-700">
           Voir toutes les livraisons
         </button>
       </div>
@@ -183,7 +183,7 @@ export const ClientActivities: React.FC = () => {
                 value={inviteEmail}
                 onChange={(e) => setInviteEmail(e.target.value)}
                 placeholder="invite@email.com"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
               />
             </div>
 
@@ -193,7 +193,7 @@ export const ClientActivities: React.FC = () => {
               </label>
               <input
                 type="date"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
               />
             </div>
 
@@ -210,7 +210,7 @@ export const ClientActivities: React.FC = () => {
                   setShowInviteModal(false);
                   setInviteEmail('');
                 }}
-                className="flex-1 bg-violet-600 text-white px-4 py-3 rounded-lg hover:bg-violet-700"
+                className="flex-1 bg-fuchsia-600 text-white px-4 py-3 rounded-lg hover:bg-fuchsia-700"
               >
                 Envoyer
               </button>

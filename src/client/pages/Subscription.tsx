@@ -73,11 +73,11 @@ export const ClientSubscription: React.FC = () => {
       <div className="bg-white rounded-xl p-6 shadow-sm mb-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
           <div>
-            <span className="text-sm text-violet-600 font-medium mb-1 block">Actuel</span>
+            <span className="text-sm text-fuchsia-600 font-medium mb-1 block">Actuel</span>
             <h2 className="text-2xl font-bold text-gray-900">{currentPlan.name}</h2>
           </div>
           <div className="mt-4 md:mt-0">
-            <span className="text-3xl font-bold text-violet-600">{currentPlan.price}</span>
+            <span className="text-3xl font-bold text-fuchsia-600">{currentPlan.price}</span>
             <span className="text-gray-500">/{currentPlan.period}</span>
           </div>
         </div>
@@ -85,14 +85,14 @@ export const ClientSubscription: React.FC = () => {
         {/* Dates */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-            <Calendar size={18} className="text-violet-600 mr-3" />
+            <Calendar size={18} className="text-fuchsia-600 mr-3" />
             <div>
               <p className="text-xs text-gray-500">Début</p>
               <p className="font-medium">{currentPlan.startDate}</p>
             </div>
           </div>
           <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-            <Clock size={18} className="text-violet-600 mr-3" />
+            <Clock size={18} className="text-fuchsia-600 mr-3" />
             <div>
               <p className="text-xs text-gray-500">Fin</p>
               <p className="font-medium">{currentPlan.endDate}</p>
@@ -101,14 +101,14 @@ export const ClientSubscription: React.FC = () => {
         </div>
 
         {/* Renouvellement */}
-        <div className="flex items-center justify-between p-4 bg-violet-50 rounded-lg mb-6">
+        <div className="flex items-center justify-between p-4 bg-fuchsia-50 rounded-lg mb-6">
           <div className="flex items-center">
-            <RefreshCw size={18} className="text-violet-600 mr-2" />
+            <RefreshCw size={18} className="text-fuchsia-600 mr-2" />
             <span className="text-sm text-gray-700">Renouvellement automatique</span>
           </div>
           <label className="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" checked={currentPlan.autoRenew} className="sr-only peer" />
-            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-violet-600"></div>
+            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-fuchsia-600"></div>
           </label>
         </div>
 
@@ -117,7 +117,7 @@ export const ClientSubscription: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
           {currentPlan.benefits.map((benefit, idx) => (
             <div key={idx} className="flex items-center text-sm">
-              <Check size={16} className="text-violet-600 mr-2 flex-shrink-0" />
+              <Check size={16} className="text-fuchsia-600 mr-2 flex-shrink-0" />
               <span className="text-gray-600">{benefit}</span>
             </div>
           ))}
@@ -125,7 +125,7 @@ export const ClientSubscription: React.FC = () => {
 
         {/* Boutons action */}
         <div className="flex flex-col sm:flex-row gap-3">
-          <button className="flex-1 bg-violet-600 text-white py-3 rounded-lg hover:bg-violet-700 font-medium">
+          <button className="flex-1 bg-fuchsia-600 text-white py-3 rounded-lg hover:bg-fuchsia-700 font-medium">
             Changer de formule
           </button>
           <button className="flex-1 border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 font-medium">
@@ -169,25 +169,25 @@ export const ClientSubscription: React.FC = () => {
         <h3 className="font-semibold text-gray-900 mb-4">Autres formules disponibles</h3>
         <div className="space-y-4">
           {availablePlans.map((plan) => (
-            <div key={plan.id} className={`p-4 border rounded-lg ${plan.popular ? 'border-violet-600 bg-violet-50' : 'border-gray-200'}`}>
+            <div key={plan.id} className={`p-4 border rounded-lg ${plan.popular ? 'border-fuchsia-600 bg-fuchsia-50' : 'border-gray-200'}`}>
               <div className="flex justify-between items-start mb-2">
                 <div>
                   <h4 className="font-semibold">{plan.name}</h4>
                   <p className="text-sm text-gray-500">{plan.price} FCFA/{plan.period}</p>
                 </div>
                 {plan.popular && (
-                  <span className="text-xs bg-violet-600 text-white px-2 py-1 rounded-full">Populaire</span>
+                  <span className="text-xs bg-fuchsia-600 text-white px-2 py-1 rounded-full">Populaire</span>
                 )}
               </div>
               <ul className="space-y-1 mb-3">
                 {plan.features.map((feat, i) => (
                   <li key={i} className="text-xs text-gray-600 flex items-center">
-                    <Check size={12} className="text-violet-600 mr-1" />
+                    <Check size={12} className="text-fuchsia-600 mr-1" />
                     {feat}
                   </li>
                 ))}
               </ul>
-              <button className="text-violet-600 text-sm font-medium hover:underline">
+              <button className="text-fuchsia-600 text-sm font-medium hover:underline">
                 Choisir cette formule
               </button>
             </div>

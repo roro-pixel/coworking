@@ -16,7 +16,7 @@ export const ClientDashboard: React.FC = () => {
     return (
       <ClientLayout>
         <div className="flex justify-center items-center min-h-[400px]">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
         </div>
       </ClientLayout>
     );
@@ -43,12 +43,12 @@ export const ClientDashboard: React.FC = () => {
         <InvoicesPreview invoices={invoices || []} />
       </div>
 
-      <div className="mt-8 bg-violet-50 rounded-xl p-6">
+      <div className="mt-8 bg-fuchsia-50 rounded-xl p-6">
         <h3 className="font-semibold text-gray-900 mb-3">Mon abonnement</h3>
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600 mb-1">Plan actuel</p>
-            <p className="text-xl font-bold text-violet-600">Premium</p>
+            <p className="text-xl font-bold text-fuchsia-600">Premium</p>
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600 mb-1">Prochain paiement</p>

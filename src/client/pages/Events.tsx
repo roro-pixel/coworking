@@ -93,7 +93,7 @@ export const ClientEvents: React.FC = () => {
               onClick={() => setFilter(f)}
               className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
                 filter === f
-                  ? 'bg-violet-600 text-white'
+                  ? 'bg-fuchsia-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -118,7 +118,7 @@ export const ClientEvents: React.FC = () => {
               <div className="flex-1 p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <h3 className="text-lg font-semibold text-gray-900">{event.title}</h3>
-                  <span className="text-sm text-violet-600 font-medium">
+                  <span className="text-sm text-fuchsia-600 font-medium">
                     {event.registered}/{event.capacity} inscrits
                   </span>
                 </div>
@@ -144,7 +144,7 @@ export const ClientEvents: React.FC = () => {
                   </div>
                 </div>
 
-                <button className="bg-violet-600 text-white px-6 py-2 rounded-lg hover:bg-violet-700 text-sm font-medium">
+                <button className="bg-fuchsia-600 text-white px-6 py-2 rounded-lg hover:bg-fuchsia-700 text-sm font-medium">
                   M'inscrire
                 </button>
               </div>
@@ -176,7 +176,7 @@ export const ClientEvents: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-4 text-violet-600 hover:text-violet-700 text-sm font-medium">
+        <button className="mt-4 text-fuchsia-600 hover:text-fuchsia-700 text-sm font-medium">
           Voir historique complet
         </button>
       </div>

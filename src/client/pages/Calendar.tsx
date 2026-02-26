@@ -103,7 +103,7 @@ export const ClientCalendar: React.FC = () => {
         <select
           value={selectedSpace}
           onChange={(e) => setSelectedSpace(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
         >
           <option value="all">Tous les espaces</option>
           {spaces.map(space => (
@@ -162,11 +162,11 @@ export const ClientCalendar: React.FC = () => {
                 onClick={() => setSelectedDate(dateKey)}
                 className={`
                   h-24 p-2 rounded-lg border-2 transition-all text-left
-                  ${isSelected ? 'border-violet-600 bg-violet-50' : 'border-gray-100 hover:border-violet-200'}
-                  ${isToday ? 'bg-violet-50' : 'bg-white'}
+                  ${isSelected ? 'border-fuchsia-600 bg-fuchsia-50' : 'border-gray-100 hover:border-fuchsia-200'}
+                  ${isToday ? 'bg-fuchsia-50' : 'bg-white'}
                 `}
               >
-                <span className={`text-sm font-medium ${isToday ? 'text-violet-600' : 'text-gray-700'}`}>
+                <span className={`text-sm font-medium ${isToday ? 'text-fuchsia-600' : 'text-gray-700'}`}>
                   {day.getDate()}
                 </span>
                 
@@ -242,14 +242,14 @@ export const ClientCalendar: React.FC = () => {
                         {timeSlots.map((slot, idx) => (
                           <button
                             key={idx}
-                            className="text-xs p-2 border border-gray-200 rounded-lg hover:border-violet-600 hover:bg-violet-50 transition-colors"
+                            className="text-xs p-2 border border-gray-200 rounded-lg hover:border-fuchsia-600 hover:bg-fuchsia-50 transition-colors"
                           >
                             {slot}
                           </button>
                         ))}
                       </div>
 
-                      <button className="text-violet-600 text-sm font-medium hover:underline">
+                      <button className="text-fuchsia-600 text-sm font-medium hover:underline">
                         Réserver cet espace
                       </button>
                     </>
@@ -272,7 +272,7 @@ export const ClientCalendar: React.FC = () => {
           <span className="text-gray-600">Réservé</span>
         </div>
         <div className="flex items-center">
-          <div className="w-4 h-4 bg-violet-100 border border-violet-300 rounded mr-2"></div>
+          <div className="w-4 h-4 bg-fuchsia-100 border border-fuchsia-300 rounded mr-2"></div>
           <span className="text-gray-600">Aujourd'hui</span>
         </div>
       </div>
