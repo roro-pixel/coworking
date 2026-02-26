@@ -84,7 +84,7 @@ export const About: React.FC = () => {
             </p>
           </div>
           <div className="relative opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]" style={{ animationDelay: '0.4s' }}>
-            <div className="absolute -inset-4 bg-violet-100 rounded-2xl transform rotate-3"></div>
+            <div className="absolute -inset-4 bg-fuchsia-100 rounded-2xl transform rotate-3"></div>
             <img 
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
               alt="Notre équipe"
@@ -94,11 +94,11 @@ export const About: React.FC = () => {
         </div>
 
         {/* Stats */}
-        <div className="bg-violet-50 rounded-3xl p-12 mb-20">
+        <div className="bg-fuchsia-50 rounded-3xl p-12 mb-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]" style={{ animationDelay: `${0.5 + index * 0.1}s` }}>
-                <div className="text-4xl font-bold text-violet-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-fuchsia-600 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -113,8 +113,8 @@ export const About: React.FC = () => {
               const Icon = value.icon;
               return (
                 <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]" style={{ animationDelay: `${0.6 + index * 0.1}s` }}>
-                  <div className="bg-violet-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="text-violet-600" size={32} />
+                  <div className="bg-fuchsia-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="text-fuchsia-600" size={32} />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -130,11 +130,11 @@ export const About: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]" style={{ animationDelay: `${0.8 + index * 0.1}s` }}>
-                <div className="w-32 h-32 bg-violet-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="text-violet-600" size={40} />
+                <div className="w-32 h-32 bg-fuchsia-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="text-fuchsia-600" size={40} />
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                <p className="text-violet-600 font-medium mb-3">{member.role}</p>
+                <p className="text-fuchsia-600 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600">{member.bio}</p>
               </div>
             ))}

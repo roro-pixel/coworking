@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                 />
               </div>
 
@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                 />
               </div>
 
@@ -68,7 +68,7 @@ export const Contact: React.FC = () => {
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                 />
               </div>
 
@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500 resize-none"
                 />
               </div>
 
@@ -99,8 +99,8 @@ export const Contact: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-violet-100 p-3 rounded-lg">
-                    <MapPin className="text-violet-600" size={24} />
+                  <div className="bg-fuchsia-100 p-3 rounded-lg">
+                    <MapPin className="text-fuchsia-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Adresse</h3>
@@ -111,8 +111,8 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-violet-100 p-3 rounded-lg">
-                    <Phone className="text-violet-600" size={24} />
+                  <div className="bg-fuchsia-100 p-3 rounded-lg">
+                    <Phone className="text-fuchsia-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Téléphone</h3>
@@ -121,8 +121,8 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-violet-100 p-3 rounded-lg">
-                    <Mail className="text-violet-600" size={24} />
+                  <div className="bg-fuchsia-100 p-3 rounded-lg">
+                    <Mail className="text-fuchsia-600" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>

@@ -212,7 +212,7 @@ export const Subscriptions: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-600">
             Des formules flexibles et professionnelles pour un accès sur mesure à nos espaces. 
-            <span className="block mt-2 text-violet-600 font-semibold">
+            <span className="block mt-2 text-fuchsia-fuchsia font-semibold">
               Flexibilité, confort, productivité et avantages exclusifs membres.
             </span>
           </p>
@@ -220,33 +220,33 @@ export const Subscriptions: React.FC = () => {
 
         {/* ===== GRILLE DES FORMULES ===== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div
               key={plan.id}
               className={`
                 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-2
-                ${plan.popular ? 'border-violet-600 relative' : 'border-gray-100'}
+                ${plan.popular ? 'border-fuchsia-600 relative' : 'border-gray-100'}
               `}
             >
               {plan.popular && (
-                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-fuchsia-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
                   RECOMMANDÉ
                 </span>
               )}
               
               <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
               <p className="text-gray-500 text-sm mb-2">{plan.description}</p>
-              <p className="text-xs text-violet-600 mb-4">{plan.target}</p>
+              <p className="text-xs text-fuchsia-600 mb-4">{plan.target}</p>
               
               <div className="mb-4">
-                <span className="text-3xl font-bold text-violet-600">{plan.price}</span>
+                <span className="text-3xl font-bold text-fuchsia-600">{plan.price}</span>
                 <span className="text-gray-500 text-sm">/{plan.period}</span>
               </div>
 
               <div className="space-y-2 mb-6">
                 {plan.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start text-sm">
-                    <Check size={16} className="text-violet-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="text-fuchsia-600 mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-600">{benefit}</span>
                   </div>
                 ))}
@@ -266,7 +266,7 @@ export const Subscriptions: React.FC = () => {
         </div>
 
         {/* ===== AVANTAGES EXCLUSIFS MEMBRES ===== */}
-        <div className="bg-violet-50 rounded-3xl p-12 mb-20">
+        <div className="bg-fuchsia-50 rounded-3xl p-12 mb-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
             Avantages exclusifs membres
           </h2>
@@ -279,8 +279,8 @@ export const Subscriptions: React.FC = () => {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="bg-white rounded-xl p-6 flex items-start space-x-4">
-                  <div className="bg-violet-100 p-3 rounded-lg flex-shrink-0">
-                    <Icon size={24} className="text-violet-600" />
+                  <div className="bg-fuchsia-100 p-3 rounded-lg flex-shrink-0">
+                    <Icon size={24} className="text-fuchsia-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{benefit.title}</h3>
@@ -304,7 +304,7 @@ export const Subscriptions: React.FC = () => {
           <div className="grid md:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-12 h-12 bg-violet-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-12 h-12 bg-fuchsia-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.number}
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
@@ -317,7 +317,7 @@ export const Subscriptions: React.FC = () => {
         {/* ===== FAQ ===== */}
         <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
           <div className="flex items-center mb-8">
-            <HelpCircle size={24} className="text-violet-600 mr-3" />
+            <HelpCircle size={24} className="text-fuchsia-600 mr-3" />
             <h2 className="text-2xl font-bold text-gray-900">Questions fréquentes</h2>
           </div>
 
@@ -347,18 +347,18 @@ export const Subscriptions: React.FC = () => {
         </div>
 
         {/* ===== CTA FINAL ===== */}
-        <div className="text-center bg-gradient-to-r from-violet-600 to-violet-800 text-white rounded-3xl p-12">
+        <div className="text-center bg-fuchsia-600 text-white rounded-3xl p-12">
           <h2 className="text-3xl font-bold mb-4">
             Prêt à rejoindre la communauté ?
           </h2>
-          <p className="text-xl text-violet-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-fuchsia-100 mb-8 max-w-2xl mx-auto">
             Choisissez la formule qui vous correspond et accédez à votre espace de travail idéal dès aujourd'hui.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="primary"
               size="lg"
-              className="!bg-white !text-violet-600 hover:!bg-gray-100"
+              className="!bg-white !text-fuchsia-600 hover:!bg-gray-100"
               onClick={() => navigate('/register')}
             >
               S'abonner maintenant
@@ -366,7 +366,7 @@ export const Subscriptions: React.FC = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-violet-700"
+              className="border-white text-white hover:bg-fuchsia-700"
               onClick={() => navigate('/contact')}
             >
               Contacter l'équipe

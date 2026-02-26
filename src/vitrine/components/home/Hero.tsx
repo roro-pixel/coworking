@@ -11,14 +11,14 @@ export const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="pt-32 pb-20 bg-gradient-to-b from-violet-50 to-white">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-fuchsia-50 to-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center">
             {/* Left Content */}
             <div className="lg:w-1/2 mb-12 lg:mb-0 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 L'espace de travail
-                <span className="block text-violet-600">
+                <span className="block text-fuchsia-600">
                   qui vous ressemble
                 </span>
               </h1>
@@ -45,15 +45,15 @@ export const Hero: React.FC = () => {
               {/* Stats */}
               <div className="flex gap-8 mt-12">
                 <div>
-                  <div className="text-3xl font-bold text-violet-600">500+</div>
+                  <div className="text-3xl font-bold text-fuchsia-600">500+</div>
                   <div className="text-gray-600">Membres</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-violet-600">4.9</div>
+                  <div className="text-3xl font-bold text-fuchsia-600">4.9</div>
                   <div className="text-gray-600">Note moyenne</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-violet-600">24/7</div>
+                  <div className="text-3xl font-bold text-fuchsia-600">24/7</div>
                   <div className="text-gray-600">Accès sécurisé</div>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
             {/* Right Image */}
             <div className="lg:w-1/2 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]" style={{ animationDelay: '0.2s' }}>
               <div className="relative">
-                <div className="absolute -inset-4 bg-violet-200 rounded-2xl transform rotate-3"></div>
+                <div className="absolute -inset-4 bg-fuchsia-200 rounded-2xl transform rotate-3"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                   alt="Coworking space"

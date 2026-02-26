@@ -41,18 +41,18 @@ export const HomeSpaceCard: React.FC<HomeSpaceCardProps> = ({ space, index }) =>
 
         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
           <span className="flex items-center">
-            <Users size={16} className="mr-1 text-violet-600" />
+            <Users size={16} className="mr-1 text-fuchsia-600" />
             {space.capacity} personnes
           </span>
           <span className="flex items-center">
-            <MapPin size={16} className="mr-1 text-violet-600" />
+            <MapPin size={16} className="mr-1 text-fuchsia-600" />
             {space.location}
           </span>
         </div>
 
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-2xl font-bold text-violet-600">
+            <span className="text-2xl font-bold text-fuchsia-600">
               {space.pricePerHour.toLocaleString()} FCFA
             </span>
             <span className="text-sm text-gray-500">/heure</span>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import Logo from'../../../assets/img/logo.jpeg';
+
 
 export const Footer: React.FC = () => {
   return (
@@ -9,9 +11,10 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo & Description */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              CoWork<span className="text-violet-400">Space</span>
-            </h3>
+            {/* <h3 className="text-2xl font-bold mb-4">
+              CoWork<span className="text-fuchsia-400">Space</span>
+            </h3> */}
+             <img src={Logo} alt="" className='w-15 h-15' />
             <p className="text-gray-400 text-sm">
               Des espaces de coworking modernes et inspirants pour les professionnels d'aujourd'hui.
             </p>
@@ -21,9 +24,9 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold mb-4">Liens rapides</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/espaces" className="hover:text-violet-400">Espaces & Tarifs</Link></li>
-              <li><Link to="/a-propos" className="hover:text-violet-400">À propos</Link></li>
-              <li><Link to="/contact" className="hover:text-violet-400">Contact</Link></li>
+              <li><Link to="/espaces" className="hover:text-fuchsia-400">Espaces & Tarifs</Link></li>
+              <li><Link to="/a-propos" className="hover:text-fuchsia-400">À propos</Link></li>
+              <li><Link to="/contact" className="hover:text-fuchsia-400">Contact</Link></li>
             </ul>
           </div>
 
@@ -31,9 +34,9 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold mb-4">Légal</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link to="/mentions-legales" className="hover:text-violet-400">Mentions légales</Link></li>
-              <li><Link to="/confidentialite" className="hover:text-violet-400">Confidentialité</Link></li>
-              <li><Link to="/cgv" className="hover:text-violet-400">CGV</Link></li>
+              <li><Link to="/mentions-legales" className="hover:text-fuchsia-400">Mentions légales</Link></li>
+              <li><Link to="/confidentialite" className="hover:text-fuchsia-400">Confidentialité</Link></li>
+              <li><Link to="/cgv" className="hover:text-fuchsia-400">CGV</Link></li>
             </ul>
           </div>
 
@@ -42,15 +45,15 @@ export const Footer: React.FC = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center">
-                <MapPin size={16} className="mr-2 text-violet-400" />
+                <MapPin size={16} className="mr-2 text-fuchsia-400" />
                 01 Avenue des affaires, Pointe-Noire
               </li>
               <li className="flex items-center">
-                <Phone size={16} className="mr-2 text-violet-400" />
+                <Phone size={16} className="mr-2 text-fuchsia-400" />
                 +242 0X XXX XX XX
               </li>
               <li className="flex items-center">
-                <Mail size={16} className="mr-2 text-violet-400" />
+                <Mail size={16} className="mr-2 text-fuchsia-400" />
                 contact@coworkspace.com
               </li>
             </ul>
@@ -68,11 +71,11 @@ export const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Votre email"
-                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
               />
               <button
                 type="submit"
-                className="bg-violet-600 px-4 py-3 rounded-r-lg hover:bg-violet-700 transition-colors"
+                className="bg-fuchsia-600 px-4 py-3 rounded-r-lg hover:bg-fuchsia-700 transition-colors"
               >
                 <ArrowRight size={20} />
               </button>

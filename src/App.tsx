@@ -22,6 +22,11 @@ import { ClientProfile } from './client/pages/Profile';
 import { ClientSettings } from './client/pages/Settings';
 import { ClientPayments } from './client/pages/Payments';
 import { ClientSupport } from './client/pages/Support';
+import { ClientSubscription } from './client/pages/Subscription';
+import { ClientWallet } from './client/pages/Wallet';
+import { ClientActivities } from './client/pages/Activities';
+import { ClientEvents } from './client/pages/Events';
+import { ClientCalendar } from './client/pages/Calendar';
 
 import { ScrollToTop } from './vitrine/components/ScrollToTop';
 
@@ -91,6 +96,37 @@ function App() {
                 <ClientSupport />
               </ProtectedRoute>
             } />
+
+            <Route path="/client/subscription" element={
+              <ProtectedRoute>
+                <ClientSubscription />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/client/wallet" element={
+              <ProtectedRoute>
+                <ClientWallet />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/client/activities" element={
+              <ProtectedRoute>
+                <ClientActivities />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/client/events" element={
+              <ProtectedRoute>
+                <ClientEvents />
+              </ProtectedRoute>
+           } />
+
+           <Route path="/client/calendar" element={
+              <ProtectedRoute>
+                <ClientCalendar />
+              </ProtectedRoute>
+            } />
+
           </Routes>
         </AuthProvider>
       </BrowserRouter>

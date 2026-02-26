@@ -27,7 +27,7 @@ export const Spaces: React.FC<SpacesProps> = ({ limit }) => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex justify-center items-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
           </div>
         </div>
       </section>
@@ -57,7 +57,7 @@ export const Spaces: React.FC<SpacesProps> = ({ limit }) => {
                 placeholder="Rechercher un espace..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500"
+                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
               />
             </div>
             <Button
@@ -84,7 +84,7 @@ export const Spaces: React.FC<SpacesProps> = ({ limit }) => {
                 <select
                   value={capacityFilter || ''}
                   onChange={(e) => setCapacityFilter(e.target.value ? parseInt(e.target.value) : null)}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                 >
                   <option value="">Toutes capacités</option>
                   <option value="2">2+ personnes</option>

@@ -106,13 +106,13 @@ export const MembershipPlans: React.FC = () => {
               key={index}
               className={`
                 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border-2
-                ${plan.popular ? 'border-violet-600 relative' : 'border-gray-100'}
+                ${plan.popular ? 'border-fuchsia-600 relative' : 'border-gray-100'}
                 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]
               `}
               style={{ animationDelay: `${0.3 + index * 0.1}s` }}
             >
               {plan.popular && (
-                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-violet-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-fuchsia-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
                   POPULAIRE
                 </span>
               )}
@@ -121,14 +121,14 @@ export const MembershipPlans: React.FC = () => {
               <p className="text-gray-500 text-sm mb-4">{plan.description}</p>
               
               <div className="mb-4">
-                <span className="text-3xl font-bold text-violet-600">{plan.price}</span>
+                <span className="text-3xl font-bold text-fuchsia-600">{plan.price}</span>
                 <span className="text-gray-500 text-sm">/{plan.period}</span>
               </div>
 
               <ul className="space-y-2 mb-6">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start text-sm text-gray-600">
-                    <Check size={16} className="text-violet-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="text-fuchsia-600 mr-2 flex-shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>
                 ))}

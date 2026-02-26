@@ -27,7 +27,7 @@ export const SpaceDetail: React.FC = () => {
       <div className="pt-32 pb-20">
         <div className="container mx-auto px-4">
           <div className="flex justify-center items-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-fuchsia-600"></div>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ export const SpaceDetail: React.FC = () => {
         {/* Bouton retour */}
         <button
           onClick={() => navigate('/espaces')}
-          className="flex items-center text-gray-600 hover:text-violet-600 mb-8 transition-colors group"
+          className="flex items-center text-gray-600 hover:text-fuchsia-600 mb-8 transition-colors group"
         >
           <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
           Retour aux espaces
@@ -90,11 +90,11 @@ export const SpaceDetail: React.FC = () => {
               
               <div className="flex items-center space-x-6 text-gray-600">
                 <span className="flex items-center">
-                  <MapPin size={18} className="mr-2 text-violet-600" />
+                  <MapPin size={18} className="mr-2 text-fuchsia-600" />
                   {space.location}
                 </span>
                 <span className="flex items-center">
-                  <Users size={18} className="mr-2 text-violet-600" />
+                  <Users size={18} className="mr-2 text-fuchsia-600" />
                   {space.capacity} personnes
                 </span>
               </div>
@@ -107,20 +107,20 @@ export const SpaceDetail: React.FC = () => {
             </div>
 
             {/* Tarifs */}
-            <div className="bg-violet-50 rounded-xl p-6">
+            <div className="bg-fuchsia-50 rounded-xl p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Tarifs</h2>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-3 bg-white rounded-lg">
                   <p className="text-sm text-gray-500 mb-1">À l'heure</p>
-                  <p className="text-xl font-bold text-violet-600">{space.pricePerHour.toLocaleString()} FCFA</p>
+                  <p className="text-xl font-bold text-fuchsia-600">{space.pricePerHour.toLocaleString()} FCFA</p>
                 </div>
                 <div className="text-center p-3 bg-white rounded-lg">
                   <p className="text-sm text-gray-500 mb-1">À la journée</p>
-                  <p className="text-xl font-bold text-violet-600">{space.pricePerDay.toLocaleString()} FCFA</p>
+                  <p className="text-xl font-bold text-fuchsia-600">{space.pricePerDay.toLocaleString()} FCFA</p>
                 </div>
                 <div className="text-center p-3 bg-white rounded-lg">
                   <p className="text-sm text-gray-500 mb-1">Au mois</p>
-                  <p className="text-xl font-bold text-violet-600">{space.pricePerMonth.toLocaleString()} FCFA</p>
+                  <p className="text-xl font-bold text-fuchsia-600">{space.pricePerMonth.toLocaleString()} FCFA</p>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export const SpaceDetail: React.FC = () => {
               <div className="grid grid-cols-2 gap-3">
                 {space.amenities.map((amenity, index) => (
                   <div key={index} className="flex items-center text-gray-600">
-                    <Check size={16} className="mr-2 text-violet-600 flex-shrink-0" />
+                    <Check size={16} className="mr-2 text-fuchsia-600 flex-shrink-0" />
                     <span>{amenity}</span>
                   </div>
                 ))}

@@ -1,21 +1,48 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bell, User, LogOut, Settings, ChevronDown } from 'lucide-react';
+import { Menu, Bell, User, LogOut, Settings, ChevronDown } from 'lucide-react';
 import { useAuth } from '../../../contexts/AuthContext';
 
-export const ClientHeader: React.FC = () => {
+interface ClientHeaderProps {
+  toggleSidebar: () => void;
+  isMobile: boolean;
+}
+
+export const ClientHeader: React.FC<ClientHeaderProps> = ({ toggleSidebar, isMobile }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   return (
-    <header className="fixed top-0 right-0 left-64 bg-white border-b border-gray-200 z-40 h-16">
-      <div className="flex items-center justify-between px-6 h-full">
-        <h2 className="text-lg font-semibold text-gray-800">
-          Bonjour, {user?.firstName} !
-        </h2>
-
+    <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-40 h-16">
+      <div className="flex items-center justify-between px-4 md:px-6 h-full">
         <div className="flex items-center space-x-4">
+          {/* Bouton menu mobile */}
+          {isMobile && (
+            <button
+              onClick={toggleSidebar}
+              className="p-2 hover:bg-gray-100 rounded-lg"
+            >
+              <Menu size={20} className="text-gray-600" />
+            </button>
+          )}
+          
+          {/* Logo mobile */}
+          {isMobile && (
+            <span className="text-lg font-bold text-gray-900">
+              CoWork<span className="text-violet-600">Space</span>
+            </span>
+          )}
+
+          {/* Titre desktop */}
+          {!isMobile && (
+            <h2 className="text-lg font-semibold text-gray-800">
+              Bonjour, {user?.firstName} 
+            </h2>
+          )}
+        </div>
+
+        <div className="flex items-center space-x-2 md:space-x-4">
           {/* Notifications */}
           <button className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
             <Bell size={20} />
@@ -26,13 +53,19 @@ export const ClientHeader: React.FC = () => {
           <div className="relative">
             <button
               onClick={() => setShowMenu(!showMenu)}
-              className="flex items-center space-x-3 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="flex items-center space-x-2 md:space-x-3 p-1 md:p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
               <div className="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
                 <User size={16} className="text-violet-600" />
               </div>
-              <span className="text-sm font-medium text-gray-700">{user?.firstName}</span>
-              <ChevronDown size={16} className="text-gray-500" />
+              {!isMobile && (
+                <>
+                  <span className="text-sm font-medium text-gray-700 hidden md:inline">
+                    {user?.firstName}
+                  </span>
+                  <ChevronDown size={16} className="text-gray-500 hidden md:inline" />
+                </>
+              )}
             </button>
 
             {showMenu && (

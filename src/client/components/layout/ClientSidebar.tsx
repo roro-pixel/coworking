@@ -8,26 +8,40 @@ import {
   User,
   Settings,
   HelpCircle,
-  CreditCard
+  CreditCard,
+  Wallet,
+  CalendarDays,
+  Users,
+  Ticket
 } from 'lucide-react';
 
-const menuItems = [
-  { path: '/client/dashboard', icon: LayoutDashboard, label: 'Tableau de bord' },
-  { path: '/client/bookings', icon: Calendar, label: 'Toutes les réservations' },
-  { path: '/client/upcoming', icon: Clock, label: 'Réservations à venir' },
-  { path: '/client/invoices', icon: FileText, label: 'Factures' },
-  { path: '/client/payments', icon: CreditCard, label: 'Paiements' },
-  { path: '/client/profile', icon: User, label: 'Mon profil' },
-  { path: '/client/settings', icon: Settings, label: 'Paramètres' },
-  { path: '/client/support', icon: HelpCircle, label: 'Aide et support' },
-];
+interface ClientSidebarProps {
+  closeSidebar?: () => void;
+}
 
-export const ClientSidebar: React.FC = () => {
+export const ClientSidebar: React.FC<ClientSidebarProps> = ({ closeSidebar }) => {
+  const menuItems = [
+    { path: '/client/dashboard', icon: LayoutDashboard, label: 'Tableau de bord' },
+    { path: '/client/subscription', icon: CreditCard, label: 'Mon abonnement' },
+    { path: '/client/bookings', icon: Calendar, label: 'Réservations' },
+    { path: '/client/upcoming', icon: Clock, label: 'À venir' },
+    { path: '/client/calendar', icon: CalendarDays, label: 'Calendrier' },
+    { path: '/client/wallet', icon: Wallet, label: 'Portefeuille' },
+    { path: '/client/events', icon: Ticket, label: 'Événements' },
+    { path: '/client/activities', icon: Users, label: 'Activités' },
+    { path: '/client/invoices', icon: FileText, label: 'Factures' },
+    { path: '/client/profile', icon: User, label: 'Profil' },
+    { path: '/client/settings', icon: Settings, label: 'Paramètres' },
+    { path: '/client/support', icon: HelpCircle, label: 'Support' },
+  ];
+
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-64 bg-white border-r border-gray-200">
-      <div className="p-6">
-        <div className="flex items-center space-x-2 mb-8">
-          <span className="ml-8 text-xl font-bold text-gray-900">
+    <aside className="h-full overflow-y-auto">
+      <div className="p-4">
+        {/* Logo desktop uniquement */}
+        <div className="hidden md:flex items-center space-x-2 mb-8 px-4">
+          <div className="w-8 h-8 bg-violet-600 rounded-lg"></div>
+          <span className="text-xl font-bold text-gray-900">
             CoWork<span className="text-violet-600">Space</span>
           </span>
         </div>
@@ -39,6 +53,7 @@ export const ClientSidebar: React.FC = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
+                onClick={closeSidebar}
                 className={({ isActive }) =>
                   `flex items-center px-4 py-3 rounded-lg transition-colors ${
                     isActive
@@ -47,7 +62,7 @@ export const ClientSidebar: React.FC = () => {
                   }`
                 }
               >
-                <Icon size={20} className="mr-3" />
+                <Icon size={20} className="mr-3 flex-shrink-0" />
                 <span className="text-sm font-medium">{item.label}</span>
               </NavLink>
             );

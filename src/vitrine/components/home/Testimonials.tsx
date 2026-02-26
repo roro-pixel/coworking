@@ -43,8 +43,8 @@ export const Testimonials: React.FC = () => {
               style={{ animationDelay: `${0.3 + index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-violet-600 font-semibold text-lg">
+                <div className="w-12 h-12 bg-fuchsia-100 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-fuchsia-600 font-semibold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>

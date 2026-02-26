@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, User, LogOut } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useAuth } from '../../../contexts/AuthContext';
+import Logo from'../../../assets/img/logo.jpeg';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +23,10 @@ export const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-gray-900">
+          <img src={Logo} alt="" className='w-15 h-15' />
+          {/* <Link to="/" className="text-2xl font-bold text-gray-900">
             CoWork<span className="text-violet-600">Space</span>
-          </Link>
+          </Link> */}
 
           {/* Menu Desktop */}
           <div className="hidden md:flex items-center space-x-8">
@@ -32,7 +34,7 @@ export const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-gray-600 hover:text-violet-600 transition-colors"
+                className="text-gray-600 hover:text-fuchsia-600 transition-colors"
               >
                 {item.label}
               </Link>
@@ -44,7 +46,7 @@ export const Header: React.FC = () => {
             {isAuthenticated ? (
               <>
                 <span className="text-sm text-gray-600">
-                  Bonjour, <span className="font-semibold text-violet-600">{user?.firstName}</span>
+                  Bonjour, <span className="font-semibold text-fuchsia-600">{user?.firstName}</span>
                 </span>
                 <Button variant="outline" size="sm" onClick={() => navigate('/client/dashboard')}>
                   Mon espace
@@ -79,7 +81,7 @@ export const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="block py-3 text-gray-600 hover:text-violet-600 border-b border-gray-100"
+                className="block py-3 text-gray-600 hover:text-fuchsia-600 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}

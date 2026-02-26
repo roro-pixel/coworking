@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Phone, Building, Check } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import Logo from'../../assets/img/logo.jpeg';
+
 
 export const Register: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -77,19 +79,19 @@ export const Register: React.FC = () => {
 
   if (step === 1) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-violet-50 to-white flex items-center justify-center py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 to-white flex items-center justify-center py-12 px-4">
         <div className="max-w-md w-full">
           {/* Logo et progression */}
           <div className="text-center mb-8">
             <div className="inline-block">
-              <div className="w-16 h-16 bg-violet-600 rounded-2xl mx-auto mb-4"></div>
+              <img src={Logo} alt="" className='w-20 h-20' />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Créer votre compte
             </h2>
             <p className="text-gray-600">
               Déjà membre ?{' '}
-              <Link to="/login" className="text-violet-600 hover:text-violet-700 font-medium">
+              <Link to="/login" className="text-fuchsia-600 hover:text-fuchsia-700 font-medium">
                 Se connecter
               </Link>
             </p>
@@ -99,7 +101,7 @@ export const Register: React.FC = () => {
           <div className="mb-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-violet-600 text-white rounded-full flex items-center justify-center font-semibold">1</div>
+                <div className="w-8 h-8 bg-fuchsia-600 text-white rounded-full flex items-center justify-center font-semibold">1</div>
                 <span className="ml-2 text-sm font-medium text-gray-900">Informations</span>
               </div>
               <div className="flex-1 mx-4 h-0.5 bg-gray-200"></div>
@@ -129,7 +131,7 @@ export const Register: React.FC = () => {
                       required
                       value={formData.firstName}
                       onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                       placeholder="Prénom"
                     />
                   </div>
@@ -141,7 +143,7 @@ export const Register: React.FC = () => {
                     required
                     value={formData.lastName}
                     onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="Nom"
                   />
                 </div>
@@ -156,7 +158,7 @@ export const Register: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="votre.email@mail.com"
                   />
                 </div>
@@ -170,7 +172,7 @@ export const Register: React.FC = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="0X XXX XX XX"
                   />
                 </div>
@@ -184,7 +186,7 @@ export const Register: React.FC = () => {
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({...formData, company: e.target.value})}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="Votre entreprise"
                   />
                 </div>
@@ -199,7 +201,7 @@ export const Register: React.FC = () => {
                     required
                     value={formData.password}
                     onChange={(e) => setFormData({...formData, password: e.target.value})}
-                    className="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="••••••••"
                   />
                   <button
@@ -220,7 +222,7 @@ export const Register: React.FC = () => {
                     required
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
-                    className="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                     placeholder="••••••••"
                   />
                   <button
@@ -236,7 +238,7 @@ export const Register: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-violet-600 text-white py-3 rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-fuchsia-600 text-white py-3 rounded-lg hover:bg-fuchsia-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mx-auto"></div>
@@ -254,12 +256,12 @@ export const Register: React.FC = () => {
 
   // Étape 2: Choix du plan
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 to-white py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 to-white py-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Logo et progression */}
         <div className="text-center mb-8">
           <div className="inline-block">
-            <div className="w-16 h-16 bg-violet-600 rounded-2xl mx-auto mb-4"></div>
+            <div className="w-16 h-16 bg-fuchsia-600 rounded-2xl mx-auto mb-4"></div>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Choisissez votre plan
@@ -273,12 +275,12 @@ export const Register: React.FC = () => {
         <div className="max-w-md mx-auto mb-12">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-violet-600 text-white rounded-full flex items-center justify-center">✓</div>
+              <div className="w-8 h-8 bg-fuchsia-600 text-white rounded-full flex items-center justify-center">✓</div>
               <span className="ml-2 text-sm font-medium text-gray-900">Informations</span>
             </div>
-            <div className="flex-1 mx-4 h-0.5 bg-violet-600"></div>
+            <div className="flex-1 mx-4 h-0.5 bg-fuchsia-600"></div>
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-violet-600 text-white rounded-full flex items-center justify-center font-semibold">2</div>
+              <div className="w-8 h-8 bg-fuchsia-600 text-white rounded-full flex items-center justify-center font-semibold">2</div>
               <span className="ml-2 text-sm font-medium text-gray-900">Choix du plan</span>
             </div>
           </div>
@@ -292,31 +294,31 @@ export const Register: React.FC = () => {
               onClick={() => setSelectedPlan(plan.id)}
               className={`
                 bg-white rounded-2xl p-6 cursor-pointer transition-all border-2
-                ${selectedPlan === plan.id ? 'border-violet-600 shadow-xl' : 'border-gray-200 hover:border-violet-200'}
+                ${selectedPlan === plan.id ? 'border-fuchsia-600 shadow-xl' : 'border-gray-200 hover:border-fuchsia-200'}
                 ${plan.popular ? 'relative' : ''}
               `}
             >
               {plan.popular && (
-                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-violet-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                <span className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-fuchsia-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                   POPULAIRE
                 </span>
               )}
               <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
               <div className="mb-4">
-                <span className="text-3xl font-bold text-violet-600">{plan.price} FCFA</span>
+                <span className="text-3xl font-bold text-fuchsia-600">{plan.price} FCFA</span>
                 <span className="text-gray-500">/{plan.period}</span>
               </div>
               <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="text-sm text-gray-600 flex items-center">
-                    <Check size={16} className="text-violet-600 mr-2" />
+                    <Check size={16} className="text-fuchsia-600 mr-2" />
                     {feature}
                   </li>
                 ))}
               </ul>
               <div className={`
                 w-5 h-5 rounded-full border-2 mx-auto
-                ${selectedPlan === plan.id ? 'border-violet-600 bg-violet-600' : 'border-gray-300'}
+                ${selectedPlan === plan.id ? 'border-fuchsia-600 bg-fuchsia-600' : 'border-gray-300'}
               `} />
             </div>
           ))}
@@ -327,7 +329,7 @@ export const Register: React.FC = () => {
           <button
             onClick={handlePlanConfirm}
             disabled={!selectedPlan}
-            className="bg-violet-600 text-white px-12 py-3 rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+            className="bg-fuchsia-600 text-white px-12 py-3 rounded-lg hover:bg-fuchsia-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
           >
             Confirmer et accéder à mon espace
           </button>

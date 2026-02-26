@@ -47,7 +47,7 @@ export const SpaceCard: React.FC<SpaceCardProps> = ({ space, index }) => {
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-semibold text-gray-900">{space.name}</h3>
           <div className="text-right">
-            <p className="text-2xl font-bold text-violet-600">
+            <p className="text-2xl font-bold text-fuchsia-600">
               {space.pricePerHour.toLocaleString()} FCFA
             </p>
             <p className="text-xs text-gray-500">/heure</p>
@@ -71,7 +71,7 @@ export const SpaceCard: React.FC<SpaceCardProps> = ({ space, index }) => {
           {space.amenities.slice(0, 3).map((amenity, i) => (
             <span
               key={i}
-              className="px-3 py-1 bg-violet-50 text-violet-700 rounded-full text-xs"
+              className="px-3 py-1 bg-fuchsia-50 text-fuchsia-700 rounded-full text-xs"
             >
               {amenity}
             </span>
@@ -86,15 +86,15 @@ export const SpaceCard: React.FC<SpaceCardProps> = ({ space, index }) => {
         <div className="grid grid-cols-3 gap-2 mb-4">
           <div className="text-center p-2 bg-gray-50 rounded-lg">
             <p className="text-xs text-gray-500">Jour</p>
-            <p className="font-semibold text-violet-600">{space.pricePerDay.toLocaleString()} FCFA</p>
+            <p className="font-semibold text-fuchsia-600">{space.pricePerDay.toLocaleString()} FCFA</p>
           </div>
           <div className="text-center p-2 bg-gray-50 rounded-lg">
             <p className="text-xs text-gray-500">Mois</p>
-            <p className="font-semibold text-violet-600">{space.pricePerMonth.toLocaleString()} FCFA</p>
+            <p className="font-semibold text-fuchsia-600">{space.pricePerMonth.toLocaleString()} FCFA</p>
           </div>
           <div className="text-center p-2 bg-gray-50 rounded-lg">
             <p className="text-xs text-gray-500">Wifi</p>
-            <Wifi size={16} className="mx-auto text-violet-600" />
+            <Wifi size={16} className="mx-auto text-fuchsia-600" />
           </div>
         </div>
 

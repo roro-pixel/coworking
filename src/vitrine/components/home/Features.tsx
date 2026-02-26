@@ -56,8 +56,8 @@ export const Features: React.FC = () => {
                 className="p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
-                <div className="bg-violet-50 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="text-violet-600" size={32} />
+                <div className="bg-fuchsia-50 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                  <Icon className="text-fuchsia-600" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>

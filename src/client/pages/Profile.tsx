@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ClientLayout } from '../components/layout/ClientLayout';
 import { User, Mail, Phone, MapPin, Camera, Save } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { QRCodeSection } from '../components/profile/QRCodeSection';
 
 export const ClientProfile: React.FC = () => {
   const { user } = useAuth();
@@ -233,6 +234,9 @@ export const ClientProfile: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <QRCodeSection />
+        
       </div>
     </ClientLayout>
   );

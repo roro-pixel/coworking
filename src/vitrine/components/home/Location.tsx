@@ -9,7 +9,7 @@ export const Location: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Text */}
           <div className="opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
-            <div className="inline-flex items-center bg-violet-100 text-violet-600 px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center bg-violet-100 text-fuchsia-600 px-4 py-2 rounded-full mb-6">
               <MapPin size={16} className="mr-2" />
               <span className="text-sm font-medium">Notre emplacement</span>
             </div>
@@ -19,7 +19,7 @@ export const Location: React.FC = () => {
             </h2>
             
             <p className="text-lg text-gray-600 mb-4">
-              <span className="font-semibold text-violet-600">Situé en plein centre ville</span>, 
+              <span className="font-semibold text-fuchsia-600">Situé en plein centre ville</span>, 
               notre espace se trouve sur l'une des voies les plus emblématiques de Pointe-Noire : 
               l'<span className="font-semibold">Avenue Charles de Gaulle</span>.
             </p>
@@ -32,9 +32,9 @@ export const Location: React.FC = () => {
             
             <div className="flex items-center space-x-4">
               <div className="flex -space-x-2">
-                <div className="w-10 h-10 bg-white rounded-full border-2 border-violet-600 flex items-center justify-center text-violet-600 font-bold">5</div>
-                <div className="w-10 h-10 bg-white rounded-full border-2 border-violet-600 flex items-center justify-center text-violet-600 font-bold">10</div>
-                <div className="w-10 h-10 bg-white rounded-full border-2 border-violet-600 flex items-center justify-center text-violet-600 font-bold">15</div>
+                <div className="w-10 h-10 bg-white rounded-full border-2 border-fuchsia-600 flex items-center justify-center text-fuchsia-600 font-bold">5</div>
+                <div className="w-10 h-10 bg-white rounded-full border-2 border-fuchsia-600 flex items-center justify-center text-fuchsia-600 font-bold">10</div>
+                <div className="w-10 h-10 bg-white rounded-full border-2 border-fuchsia-600 flex items-center justify-center text-fuchsia-600 font-bold">15</div>
               </div>
               <span className="text-sm text-gray-500">Minutes des principaux axes</span>
             </div>
